@@ -1,0 +1,21 @@
+name: Docker Image CI 2
+
+on:
+  pull_request:
+    branches:
+      - production
+      
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    container:
+      image: node:16
+      env:
+        NODE_ENV: development
+      options: --cpus 1
+    steps:
+      - name: test1
+        run: echo "test1"
+        
+      - name: test2
+        run: scripts/dev_script.sh
