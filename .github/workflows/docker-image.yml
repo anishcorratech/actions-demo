@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: test1
+    - name: This is a test 1
       run: echo "test1"
 
     - name: test2
